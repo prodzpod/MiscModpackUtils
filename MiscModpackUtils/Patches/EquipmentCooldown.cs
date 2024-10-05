@@ -12,7 +12,7 @@ namespace MiscModpackUtils.Patches
         public static Dictionary<string, float> Overrides = [];
         public static void Init()
         {
-            OverridesRaw = Main.Config.Bind("Overrides", "Equipment Durability Overrides", "", "FROM=TO, FROM equipment's cooldown will be set to TO in seconds.");
+            OverridesRaw = Main.Config.Bind("Overrides", "Equipment Cooldown Overrides", "", "FROM=TO, FROM equipment's cooldown will be set to TO in seconds.");
         }
 
         public static bool patched = false;

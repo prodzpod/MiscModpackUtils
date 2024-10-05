@@ -51,6 +51,15 @@
 	  <Reference Include="Unity.Addressables">
 	    <HintPath>..\..\libs\Unity.Addressables-nstrip.dll</HintPath>
 	  </Reference>
+	  <Reference Include="Unity.Postprocessing.Runtime">
+	    <HintPath>..\..\libs\Unity.Postprocessing.Runtime-nstrip.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Unity.RenderPipelines.Core.Runtime">
+	    <HintPath>..\..\libs\Unity.RenderPipelines.Core.Runtime-nstrip.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+	    <HintPath>..\..\libs\Unity.RenderPipelines.Core.ShaderLibrary-nstrip.dll</HintPath>
+	  </Reference>
 	  <Reference Include="Unity.ResourceManager">
 	    <HintPath>..\..\libs\Unity.ResourceManager-nstrip.dll</HintPath>
 	  </Reference>
@@ -66,8 +75,20 @@
 	  <Reference Include="UnityEngine.CoreModule">
 	    <HintPath>..\..\libs\UnityEngine.CoreModule-nstrip.dll</HintPath>
 	  </Reference>
+	  <Reference Include="UnityEngine.ImageConversionModule">
+	    <HintPath>..\..\libs\UnityEngine.ImageConversionModule-nstrip.dll</HintPath>
+	  </Reference>
+	  <Reference Include="UnityEngine.IMGUIModule">
+	    <HintPath>..\..\libs\UnityEngine.IMGUIModule-nstrip.dll</HintPath>
+	  </Reference>
 	  <Reference Include="UnityEngine.UI">
 	    <HintPath>..\..\libs\UnityEngine.UI-nstrip.dll</HintPath>
+	  </Reference>
+	  <Reference Include="UnityEngine.UIElementsModule">
+	    <HintPath>..\..\libs\UnityEngine.UIElementsModule-nstrip.dll</HintPath>
+	  </Reference>
+	  <Reference Include="UnityEngine.UIElementsNativeModule">
+	    <HintPath>..\..\libs\UnityEngine.UIElementsNativeModule-nstrip.dll</HintPath>
 	  </Reference>
 	  <Reference Include="UnityEngine.UIModule">
 	    <HintPath>..\..\libs\UnityEngine.UIModule-nstrip.dll</HintPath>

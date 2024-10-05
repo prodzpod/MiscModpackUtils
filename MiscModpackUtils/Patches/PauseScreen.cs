@@ -31,7 +31,7 @@ namespace MiscModpackUtils.Patches
                     if (Overrides.Contains(text)) transforms.Add(text, child);
                     else child.gameObject.SetActive(false);
                 }
-                var l = Overrides.ToArray(); l.Reverse();
+                var l = Overrides.ToArray(); // l.Reverse();
                 foreach (var key in l) transforms[key].SetAsFirstSibling(); 
             };
         }

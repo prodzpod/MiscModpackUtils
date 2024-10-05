@@ -16,7 +16,7 @@ namespace MiscModpackUtils.Patches
         public static Dictionary<string, string> Overrides = [];
         public static void Init()
         {
-            OverridesRaw = Main.Config.Bind("Overrides", "Elite Loop Swap", "", "FROM=TO, elite names, separated by commas. Elite ramp and crown from TO will be replaced with the one from FROM. see the log for list of valid input for your pack.");
+            OverridesRaw = Main.Config.Bind("Overrides", "Elite Look Swap", "", "FROM=TO, elite names, separated by commas. Elite ramp and crown from TO will be replaced with the one from FROM. see the log for list of valid input for your pack.");
             if (string.IsNullOrWhiteSpace(OverridesRaw.Value)) return;
             foreach (var _entry in OverridesRaw.Value.Split(",").Where(x => !string.IsNullOrWhiteSpace(x)))
             {

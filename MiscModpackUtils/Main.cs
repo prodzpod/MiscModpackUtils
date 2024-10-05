@@ -44,6 +44,7 @@ namespace MiscModpackUtils
             PauseScreen.Init();
             MainScreen.Init();
             AddArtifactCodes.Init();
+            RMTemp.Init();
             RoR2Application.onLoad += () =>
             {
                 OnBasicallyEverythingLoaded();

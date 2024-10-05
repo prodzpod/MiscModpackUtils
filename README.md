@@ -1,6 +1,9 @@
 # Prod's Miscellaneous Modpack Utils
 this is a collection of general utlities for [Radiant Malignance](https://thunderstore.io/package/prodzpod/Radiant_Malignance/) that i think would benefit many other modpack users. all values are configurable to your setup and is intended to be configured by modpack basis.
 
+## !! Completely Untested
+im releasing this rn to get main menu screen working so i can release my pack rn, feel free to bug report but expect a lot of the features to not be there actually
+
 ## Override Content
 * customizable equipment cooldowns.
 * customizable skill cooldowns.

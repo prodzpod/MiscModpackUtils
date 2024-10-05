@@ -17,7 +17,7 @@ namespace MiscModpackUtils.Patches
             On.RoR2.UI.LogBook.LogBookController.BuildMonsterEntries += (orig, self) =>
             {
                 var ret = orig(self).ToList();
-                var l = Overrides.ToArray(); l.Reverse();
+                var l = Overrides.ToArray(); // l.Reverse();
                 foreach (var entry in l)
                 {
                     var item = ret.Find(x => x.nameToken.Trim().ToUpper() == entry);
