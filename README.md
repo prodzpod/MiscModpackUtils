@@ -18,12 +18,20 @@ im releasing this rn to get main menu screen working so i can release my pack rn
 * ability to reorder stage order in logbook.
 * ability to reorder survivor order in logbook.
 * ability to reorder achievement order in logbook.
+* ability to reorder difficulty order in lobby.
+* ability to reorder artifact order in lobby.
 * ability to reorder skill and skin order in lobby.
 * ability to reorder and remove buttons in pause menu.
 
 ## Others
 * customizable main menu logo.
+* customizable main menu camera.
+* customizable main menu postprocessing.
+* customizable main menu version suffix.
 * language file support for modded language keys via `.overlaylanguage`.
 * customizable artifact code addition via configs, also adds related achievements.
 
 also check out [ContentDisabler](https://thunderstore.io/package/William758/ContentDisabler/) and [LogMute](https://thunderstore.io/package/score/LogMute/).
+
+## Changelog
+* 1.1.0: reorder difficulty, support custom size logo, logo ppv config, reorder artifact, fix pause menu reverse

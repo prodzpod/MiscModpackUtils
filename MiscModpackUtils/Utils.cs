@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.IO;
+using UnityEngine;
 
 namespace MiscModpackUtils
 {
@@ -24,6 +25,14 @@ namespace MiscModpackUtils
         {
             var a = bg.a * (1 - fg.a) + fg.a;
             return ((Vector4)fg * fg.a + (Vector4)bg * bg.a * (1 - fg.a)) / a;
+        }
+        public static Sprite Load(params string[] path)
+        {
+            var size = ImageHelper.GetDimensions(Path.Combine(path));
+            var bytes = File.ReadAllBytes(Path.Combine(path));
+            Texture2D texture = new(size.Width, size.Height, TextureFormat.RGB24, false) { filterMode = FilterMode.Trilinear };
+            texture.LoadImage(bytes);
+            return Sprite.Create(texture, new Rect(0, 0, size.Width, size.Height), new Vector2(0.5f, 0.5f), 3f);
         }
     }
 }

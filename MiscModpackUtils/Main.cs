@@ -3,6 +3,7 @@ using BepInEx.Configuration;
 using BepInEx.Logging;
 using HarmonyLib;
 using MiscModpackUtils.Patches;
+using R2API;
 using RoR2;
 using RoR2.Skills;
 using System.Linq;
@@ -35,7 +36,9 @@ namespace MiscModpackUtils
             EquipmentCooldown.Init();
             SkillAchievementSwap.Init();
             EliteLookSwap.Init();
+            DifficultyOrder.Init();
             SkillOrder.Init();
+            ArtifactOrder.Init();
             PickupLogbookOrder.Init();
             MonsterLogbookOrder.Init();
             StageLogbookOrder.Init();
@@ -44,7 +47,6 @@ namespace MiscModpackUtils
             PauseScreen.Init();
             MainScreen.Init();
             AddArtifactCodes.Init();
-            RMTemp.Init();
             RoR2Application.onLoad += () =>
             {
                 OnBasicallyEverythingLoaded();
@@ -59,6 +61,7 @@ namespace MiscModpackUtils
                 Log.LogInfo("Skins: " + string.Join(", ", SkinCatalog.allSkinDefs.Select(x => x.nameToken)));
                 Log.LogInfo("Stages: " + string.Join(", ", SceneCatalog.allStageSceneDefs.Select(x => x.cachedName)));
                 Log.LogInfo("Artifacts: " + string.Join(", ", ArtifactCatalog.artifactDefs.Select(x => x.nameToken)));
+                Log.LogInfo("Difficulties: " + string.Join(", ", DifficultyAPI.difficultyDefinitions.Values.Select(x => x.nameToken)));
                 Log.LogInfo("Achievements: " + string.Join(", ", AchievementManager.allAchievementDefs.Select(x => x.nameToken)));
             };
         }

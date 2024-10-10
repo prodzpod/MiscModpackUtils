@@ -36,6 +36,9 @@
 	  <Reference Include="R2API.ContentManagement">
 	    <HintPath>..\..\libs\R2API.ContentManagement-nstrip.dll</HintPath>
 	  </Reference>
+	  <Reference Include="R2API.Difficulty">
+	    <HintPath>..\..\libs\R2API.Difficulty-nstrip.dll</HintPath>
+	  </Reference>
 	  <Reference Include="R2API.Elites">
 	    <HintPath>..\..\libs\R2API.Elites-nstrip.dll</HintPath>
 	  </Reference>
