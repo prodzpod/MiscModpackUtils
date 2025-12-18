@@ -33,7 +33,7 @@ namespace MiscModpackUtils.Patches
             };
         }
 
-        [HarmonyPatch]
+        [HarmonyPatch(typeof(EliteRamp), nameof(EliteRamp.UpdateRampFromModel))]
         public class PatchR2API
         {
             public static void ILManipulator(ILContext il, MethodBase original, ILLabel retLabel)
@@ -48,11 +48,6 @@ namespace MiscModpackUtils.Patches
                             return (EquipmentCatalog.equipmentDefs.FirstOrDefault(x => x.name.ToUpper() == Overrides[def.eliteEquipmentDef.name.ToUpper()]) ?? def.eliteEquipmentDef).passiveBuffDef.eliteDef.eliteIndex;
                         return idx;
                     });
-            }
-
-            public static MethodBase TargetMethod()
-            {
-                return AccessTools.GetDeclaredMethods(typeof(EliteRamp)).Find(x => x.Name.StartsWith($"<{nameof(EliteRamp.UpdateRampProperly)}>g"));
             }
         }
     }

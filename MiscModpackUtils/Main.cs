@@ -41,6 +41,7 @@ namespace MiscModpackUtils
             ArtifactOrder.Init();
             PickupLogbookOrder.Init();
             MonsterLogbookOrder.Init();
+            DroneLogbookOrder.Init();
             StageLogbookOrder.Init();
             SurvivorLogbookOrder.Init();
             AchievementLogbookOrder.Init();
@@ -57,8 +58,9 @@ namespace MiscModpackUtils
                 Log.LogInfo("Entities: " + string.Join(", ", BodyCatalog.allBodyPrefabBodyBodyComponents.Select(x => x.baseNameToken)));
                 Log.LogInfo("Survivors: " + string.Join(", ", SurvivorCatalog.cachedSurvivorNames));
                 Log.LogInfo("Elites: " + string.Join(", ", EquipmentCatalog.equipmentDefs.Where(x => x.passiveBuffDef?.eliteDef != null).Select(x => x.name)));
-                Log.LogInfo("Skills: " + string.Join(", ", SkillCatalog.allSkillFamilies.Select(x => string.Join(", ", x.variants.Select(x => x.skillDef.skillNameToken)))));
+                Log.LogInfo("Skills: " + string.Join(", ", SkillCatalog.allSkillFamilies.Where(x => x != null).Select(x => string.Join(", ", x.variants.Where(x => x.skillDef != null).Select(x => x.skillDef.skillNameToken)))));
                 Log.LogInfo("Skins: " + string.Join(", ", SkinCatalog.allSkinDefs.Select(x => x.nameToken)));
+                Log.LogInfo("Drones: " + string.Join(", ", DroneCatalog.allDroneDefs.Select(x => x.nameToken)));
                 Log.LogInfo("Stages: " + string.Join(", ", SceneCatalog.allStageSceneDefs.Select(x => x.cachedName)));
                 Log.LogInfo("Artifacts: " + string.Join(", ", ArtifactCatalog.artifactDefs.Select(x => x.nameToken)));
                 Log.LogInfo("Difficulties: " + string.Join(", ", DifficultyAPI.difficultyDefinitions.Values.Select(x => x.nameToken)));

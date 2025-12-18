@@ -3,6 +3,7 @@ using RoR2;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using HarmonyLib;
 
 namespace MiscModpackUtils.Patches
 {
@@ -18,13 +19,15 @@ namespace MiscModpackUtils.Patches
             On.RoR2.UI.LogBook.LogBookController.BuildPickupEntries += (orig, self) =>
             {
                 var ret = orig(self).ToList();
-                var l = Overrides.ToArray(); l.Reverse();
-                foreach (var entry in l)
+                var l = Overrides.ToArray();
+                foreach (var entry in l.Reverse())
                 {
+                    Main.Log.LogInfo("adding:" + entry);
                     var item = ret.Find(x => x.nameToken.Trim().ToUpper() == entry);
                     ret.Remove(item); ret.Insert(0, item);
                 }
-                return ret.ToArray();
+                Main.Log.LogInfo(ret.Select(x => x.nameToken).Join());
+                return ret.Where(x => x != null).ToArray();
             };
         }
     }

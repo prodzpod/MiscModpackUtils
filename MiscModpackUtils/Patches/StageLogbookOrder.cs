@@ -1,4 +1,5 @@
 ﻿using BepInEx.Configuration;
+using RoR2;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,13 +18,13 @@ namespace MiscModpackUtils.Patches
             On.RoR2.UI.LogBook.LogBookController.BuildStageEntries += (orig, self) =>
             {
                 var ret = orig(self).ToList();
-                var l = Overrides.ToArray(); l.Reverse();
-                foreach (var entry in l)
+                var l = Overrides.ToArray();
+                foreach (var entry in l.Reverse())
                 {
-                    var item = ret.Find(x => x.nameToken.Trim().ToUpper() == entry);
+                    var item = ret.Find(x => ((SceneDef)x.extraData).cachedName.Trim().ToUpper() == entry);
                     ret.Remove(item); ret.Insert(0, item);
                 }
-                return ret.ToArray();
+                return ret.Where(x => x != null).ToArray();
             };
         }
     }

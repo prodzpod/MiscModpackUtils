@@ -1,9 +1,6 @@
 # Prod's Miscellaneous Modpack Utils
 this is a collection of general utlities for [Radiant Malignance](https://thunderstore.io/package/prodzpod/Radiant_Malignance/) that i think would benefit many other modpack users. all values are configurable to your setup and is intended to be configured by modpack basis.
 
-## !! Completely Untested
-im releasing this rn to get main menu screen working so i can release my pack rn, feel free to bug report but expect a lot of the features to not be there actually
-
 ## Override Content
 * customizable equipment cooldowns.
 * customizable skill cooldowns.
@@ -15,6 +12,7 @@ im releasing this rn to get main menu screen working so i can release my pack rn
 ## Reorder Content
 * ability to reorder pickup order in logbook.
 * ability to reorder enemy order in logbook.
+* ability to reorder drone order in logbook.
 * ability to reorder stage order in logbook.
 * ability to reorder survivor order in logbook.
 * ability to reorder achievement order in logbook.
@@ -34,4 +32,5 @@ im releasing this rn to get main menu screen working so i can release my pack rn
 also check out [ContentDisabler](https://thunderstore.io/package/William758/ContentDisabler/) and [LogMute](https://thunderstore.io/package/score/LogMute/).
 
 ## Changelog
+* 1.2.0: made to work with ac / drone reorder
 * 1.1.0: reorder difficulty, support custom size logo, logo ppv config, reorder artifact, fix pause menu reverse
